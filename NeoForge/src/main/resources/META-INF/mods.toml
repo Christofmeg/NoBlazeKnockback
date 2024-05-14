@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[38,)"
+issueTrackerURL="https://github.com/Christofmeg/NoBlazeKnockback/issues"
+license="The MIT License (MIT)"
+[[mods]]
+    modId="noblazeknockback"
+    version="${version}"
+    displayName="No Blaze Knockback"
+    displayURL="https://github.com/Christofmeg/NoBlazeKnockback"
+    logoFile="icon.png"
+    authors="Christofmeg"
+    description="Prevents knockback from Basalz, Blaze, Blitz and Blizz projectiles."
+[[dependencies.noblazeknockback]]
+    modId="forge"
+    mandatory=true
+    versionRange="[38,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.noblazeknockback]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18,)"
+    ordering="NONE"
+    side="BOTH"
