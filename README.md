@@ -1,2 +1,2 @@
-# No Blaze Knockback
+# No Blaze Knockback <a href="https://www.curseforge.com/minecraft/mc-mods/no-blaze-knockback"><img src="http://cf.way2muchnoise.eu/versions/1018674.svg" style="max-width:100%;"></a> <a href="https://www.curseforge.com/minecraft/mc-mods/no-blaze-knockback"><img src="https://cf.way2muchnoise.eu/1018674.svg" style="max-width:100%;"></a> <a href="https://modrinth.com/mod/no-blaze-knockback"><img src="https://img.shields.io/modrinth/dt/JGfuvBm7" style="max-width:100%;"></a>
 Prevents knockback from Basalz, Blaze, Blitz and Blizz projectiles.
