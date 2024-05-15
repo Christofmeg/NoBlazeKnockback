@@ -88,7 +88,7 @@ tasks.register('publishCurseForge', TaskPublishCurseForge) {
     "${forge_release_versions}".split(',').each {
         mainFile.addGameVersion("${it}")
     }
-    mainFile.addOptional("thermal-foundation")
+//    mainFile.addOptional("thermal-foundation")
 }
 
 modrinth {
@@ -100,6 +100,6 @@ modrinth {
     uploadFile = file("${project.buildDir}/libs/${archivesBaseName}-${version}.jar")
     gameVersions = "${forge_release_versions}".split(",") as List<String>
     dependencies {
-        optional.project "thermal-foundation"
+//        optional.project "thermal-foundation"
     }
 }
