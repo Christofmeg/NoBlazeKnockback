@@ -68,7 +68,7 @@ public class NoBlazeKnockback {
             Entity entity = event.getEntity();
             if (entity instanceof Player) {
                 DamageSource source = ((Player) entity).getLastDamageSource();
-                if (hitByBlazeProjectile || source != null && source.getMsgId().equals("basalz_projectile")) {
+                if (hitByBlazeProjectile || source != null && source.getMsgId().equals("basalz")) {
                     event.setStrength(0);
                     hitByBlazeProjectile = false;
                 }
