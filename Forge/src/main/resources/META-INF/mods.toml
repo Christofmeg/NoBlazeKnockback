@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[38,)"
+loaderVersion="[46,)"
 issueTrackerURL="https://github.com/Christofmeg/NoBlazeKnockback/issues"
 license="The MIT License (MIT)"
 [[mods]]
@@ -13,12 +13,12 @@ license="The MIT License (MIT)"
 [[dependencies.noblazeknockback]]
     modId="forge"
     mandatory=true
-    versionRange="[38,)"
+    versionRange="[46,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.noblazeknockback]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18,)"
+    versionRange="[1.20,1.20.6)"
     ordering="NONE"
     side="BOTH"
