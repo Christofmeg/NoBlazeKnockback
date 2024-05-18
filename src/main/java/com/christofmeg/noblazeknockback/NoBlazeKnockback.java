@@ -1,11 +1,11 @@
 package com.christofmeg.noblazeknockback;
 
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Blaze;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.SmallFireball;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.monster.BlazeEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.SmallFireballEntity;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
@@ -27,14 +27,14 @@ public class NoBlazeKnockback {
     public static void cancelKnockbackEvent(IEventBus eventBus) {
         eventBus.addListener(EventPriority.HIGHEST, false, LivingHurtEvent.class, (event) -> {
             Entity entity = event.getEntity();
-            if (entity instanceof Player) {
+            if (entity instanceof PlayerEntity) {
                 DamageSource source = event.getSource();
                 Entity sourceEntity = source.getEntity();
                 if (sourceEntity != null) {
                     EntityType<?> sourceEntityType = sourceEntity.getType();
                     Entity directEntity = source.getDirectEntity();
-                    if (sourceEntity instanceof Blaze) {
-                        if (directEntity instanceof SmallFireball) {
+                    if (sourceEntity instanceof BlazeEntity) {
+                        if (directEntity instanceof SmallFireballEntity) {
                             hitByBlazeProjectile = true;
                         }
                     } else if (sourceEntityType.toString().equals("entity.thermal.basalz")) {
@@ -66,8 +66,8 @@ public class NoBlazeKnockback {
 
         eventBus.addListener(EventPriority.LOWEST, false, LivingKnockBackEvent.class, (event) -> {
             Entity entity = event.getEntity();
-            if (entity instanceof Player) {
-                DamageSource source = ((Player) entity).getLastDamageSource();
+            if (entity instanceof PlayerEntity) {
+                DamageSource source = ((PlayerEntity) entity).getLastDamageSource();
                 if (hitByBlazeProjectile || source != null && source.getMsgId().equals("basalz")) {
                     event.setStrength(0);
                     hitByBlazeProjectile = false;

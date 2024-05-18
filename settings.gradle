@@ -22,4 +22,3 @@ pluginManagement {
 }
 
 rootProject.name = 'No Blaze Knockback'
-include("Common", "Forge")
