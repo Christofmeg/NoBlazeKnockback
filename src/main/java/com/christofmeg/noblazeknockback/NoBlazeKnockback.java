@@ -37,24 +37,24 @@ public class NoBlazeKnockback {
                         if (directEntity instanceof SmallFireballEntity) {
                             hitByBlazeProjectile = true;
                         }
-                    } else if (sourceEntityType.toString().equals("entity.thermal.basalz")) {
+                    } else if (sourceEntityType.getDescriptionId().equals("entity.thermal.basalz")) {
                         if (directEntity != null) {
                             EntityType<?> directEntityType = directEntity.getType();
-                            if (directEntityType.toString().equals("entity.thermal.basalz_projectile")) {
+                            if (directEntityType.getDescriptionId().equals("entity.thermal.basalz_projectile")) {
                                 hitByBlazeProjectile = true;
                             }
                         }
-                    } else if (sourceEntityType.toString().equals("entity.thermal.blitz")) {
+                    } else if (sourceEntityType.getDescriptionId().equals("entity.thermal.blitz")) {
                         if (directEntity != null) {
                             EntityType<?> directEntityType = directEntity.getType();
-                            if (directEntityType.toString().equals("entity.thermal.blitz_projectile")) {
+                            if (directEntityType.getDescriptionId().equals("entity.thermal.blitz_projectile")) {
                                 hitByBlazeProjectile = true;
                             }
                         }
-                    } else if (sourceEntityType.toString().equals("entity.thermal.blizz")) {
+                    } else if (sourceEntityType.getDescriptionId().equals("entity.thermal.blizz")) {
                         if (directEntity != null) {
                             EntityType<?> directEntityType = directEntity.getType();
-                            if (directEntityType.toString().equals("entity.thermal.blizz_projectile")) {
+                            if (directEntityType.getDescriptionId().equals("entity.thermal.blizz_projectile")) {
                                 hitByBlazeProjectile = true;
                             }
                         }
@@ -74,6 +74,7 @@ public class NoBlazeKnockback {
                 }
             }
         });
+
     }
 
 }
